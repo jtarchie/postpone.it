@@ -4,6 +4,8 @@ gem 'rails', '3.0.4'
 gem 'devise', '1.1.5'
 gem 'compass' , '>= 0.10.6'
 gem 'haml-rails'
+gem 'hassle', :git => 'git://github.com/jasoncodes/hassle.git'
+
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
