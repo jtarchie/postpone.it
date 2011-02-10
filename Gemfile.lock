@@ -31,6 +31,8 @@ GEM
     arel (2.0.8)
     bcrypt-ruby (2.1.4)
     builder (2.1.2)
+    compass (0.10.6)
+      haml (>= 3.0.4)
     devise (1.1.5)
       bcrypt-ruby (~> 2.1.2)
       warden (~> 1.0.2)
@@ -44,6 +46,12 @@ GEM
     faker (0.9.5)
       i18n (~> 0.4)
     fixture_builder (0.2.0)
+    haml (3.0.25)
+    haml-rails (0.3.4)
+      actionpack (~> 3.0)
+      activesupport (~> 3.0)
+      haml (~> 3.0)
+      railties (~> 3.0)
     i18n (0.5.0)
     mail (2.2.15)
       activesupport (>= 2.3.6)
@@ -96,10 +104,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  compass (>= 0.10.6)
   devise (= 1.1.5)
   factory_girl_rails (= 1.0.1)
   faker (= 0.9.5)
   fixture_builder (= 0.2.0)
+  haml-rails
   mysql2 (= 0.2.6)
   rails (= 3.0.4)
   rspec-rails (>= 2.5.0)
