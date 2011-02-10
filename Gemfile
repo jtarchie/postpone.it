@@ -1,14 +1,17 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.3'
-gem 'devise'
+gem 'rails', '3.0.4'
+gem 'devise', '1.1.5'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 group :development, :test do
   gem 'rspec-rails', '>= 2.5.0'
-  gem 'mysql2'
+  gem 'mysql2', '0.2.6'
+  gem 'factory_girl_rails', '1.0.1'
+  gem 'fixture_builder', '0.2.0'
+  gem 'faker', '0.9.5'
 end
 
 # Use unicorn as the web server

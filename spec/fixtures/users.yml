@@ -1,0 +1,16 @@
+--- 
+user: 
+  encrypted_password: $2a$10$f9GkzdlEbfH89j/Nbj2OXuTlDiYh0i6jZY9lTLX29L/RDzEh4ceWq
+  created_at: 2011-02-10 06:07:13 Z
+  updated_at: 2011-02-10 06:07:13 Z
+  last_sign_in_ip: 
+  last_sign_in_at: 
+  sign_in_count: 0
+  id: 1
+  password_salt: $2a$10$f9GkzdlEbfH89j/Nbj2OXu
+  reset_password_token: 
+  remember_token: 
+  current_sign_in_ip: 
+  remember_created_at: 
+  current_sign_in_at: 
+  email: roman@hagenes.name
