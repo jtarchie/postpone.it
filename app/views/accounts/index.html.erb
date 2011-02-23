@@ -1,0 +1,6 @@
+<h1>Accounts</h1>
+<ul>
+  <li>
+    <%= link_to "Facebook (#{current_user.authorizations.provider("facebook").count})", user_omniauth_authorize_path(:facebook) %>
+  </li>
+</ul>

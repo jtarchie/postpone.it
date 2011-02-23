@@ -33,3 +33,6 @@ Postponeit::Application.configure do
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr
 end
+
+ENV['FACEBOOK_APP_ID'] = "facebook_app_id"
+ENV['FACEBOOK_APP_SECRET'] = "facebook_app_secret"

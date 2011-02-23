@@ -26,3 +26,5 @@ Postponeit::Application.configure do
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 end
 
+ENV['FACEBOOK_APP_ID'] = "183719741669692"
+ENV['FACEBOOK_APP_SECRET'] = "e0eddf015153c767d1eb52194a132b52"

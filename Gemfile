@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.4'
-gem 'devise', '1.1.5'
+gem 'devise', :git => "git://github.com/plataformatec/devise.git"
 gem 'compass' , '>= 0.10.6'
 gem 'haml-rails'
 gem 'hassle', :git => 'git://github.com/koppen/hassle.git'
@@ -20,4 +20,5 @@ group :development, :test do
   gem 'cucumber-rails'
   gem 'capybara'
   gem 'database_cleaner'
+  gem "launchy"
 end

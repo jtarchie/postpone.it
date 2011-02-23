@@ -27,4 +27,15 @@ RSpec.configure do |config|
   config.global_fixtures = :all
 
   config.include Devise::TestHelpers, :type => :controller
+  config.render_views
+
+  Devise::OmniAuth.test_mode!
+
+  config.before do
+    Devise::OmniAuth.short_circuit_authorizers!
+  end
+
+  config.after do
+    Devise::OmniAuth.unshort_circuit_authorizers!
+  end
 end
