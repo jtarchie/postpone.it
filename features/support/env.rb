@@ -61,11 +61,14 @@ Before do
 end
 
 
-Devise::OmniAuth.test_mode!
+Before do
+  Devise::OmniAuth.test_mode!
+end
 
 After do
  Devise::OmniAuth.unshort_circuit_authorizers!
  Devise::OmniAuth.reset_stubs!(:facebook)
+ Devise::OmniAuth.reset_stubs!(:twitter)
 end
 
 

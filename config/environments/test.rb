@@ -34,5 +34,8 @@ Postponeit::Application.configure do
   config.active_support.deprecation = :stderr
 end
 
-ENV['FACEBOOK_APP_ID'] = "facebook_app_id"
-ENV['FACEBOOK_APP_SECRET'] = "facebook_app_secret"
+ENV['FACEBOOK_APP_ID'] = "facebook"
+ENV['FACEBOOK_APP_SECRET'] = "facebook"
+
+ENV['TWITTER_CONSUMER_KEY'] = "twitter"
+ENV['TWITTER_CONSUMER_SECRET'] = "twitter"

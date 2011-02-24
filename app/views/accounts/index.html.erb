@@ -3,4 +3,7 @@
   <li>
     <%= link_to "Facebook (#{current_user.authorizations.provider("facebook").count})", user_omniauth_authorize_path(:facebook) %>
   </li>
+  <li>
+    <%= link_to "Twitter (#{current_user.authorizations.provider("twitter").count})", user_omniauth_authorize_path(:twitter) %>
+  </li>
 </ul>
