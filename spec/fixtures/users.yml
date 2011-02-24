@@ -1,8 +1,8 @@
 --- 
 user: 
-  encrypted_password: $2a$10$6s9FUlfY4qpjj.BD4/juweFPOp..jItTzcwXj9o41eo7AB.Jko44e
-  created_at: 2011-02-24 03:01:48 Z
-  updated_at: 2011-02-24 03:01:48 Z
+  encrypted_password: $2a$10$d462POM5GbI31AfvAYUDpu51sFtXvFB6C1NAK2hIXTCil97xpWEWC
+  created_at: 2011-02-24 04:55:25 Z
+  updated_at: 2011-02-24 04:55:25 Z
   last_sign_in_ip: 
   last_sign_in_at: 
   sign_in_count: 0
@@ -13,4 +13,4 @@ user:
   current_sign_in_ip: 
   remember_created_at: 
   current_sign_in_at: 
-  email: kevin@treutel.name
+  email: moriah.bogan@okeefedare.info
