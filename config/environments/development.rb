@@ -25,8 +25,3 @@ Postponeit::Application.configure do
 
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 end
-
-ENV['FACEBOOK_APP_ID'] = "183719741669692"
-ENV['FACEBOOK_APP_SECRET'] = "e0eddf015153c767d1eb52194a132b52"
-ENV['TWITTER_CONSUMER_KEY'] = "IFMRACqpPyVmM1XRXfpV6w"
-ENV['TWITTER_CONSUMER_SECRET'] = "axpINAh65FsqDk4McnKzgqO5kd55AfSmfTqMPzFjjug"
