@@ -1,16 +1,16 @@
 --- 
 user: 
-  encrypted_password: $2a$10$D8uMplClruLWuPlllfxifun29mW4lSyJQ8QfL05YX.ADQyIHxtlJa
-  created_at: 2011-02-23 07:40:44 Z
-  updated_at: 2011-02-23 07:40:44 Z
+  encrypted_password: $2a$10$6s9FUlfY4qpjj.BD4/juweFPOp..jItTzcwXj9o41eo7AB.Jko44e
+  created_at: 2011-02-24 03:01:48 Z
+  updated_at: 2011-02-24 03:01:48 Z
   last_sign_in_ip: 
   last_sign_in_at: 
   sign_in_count: 0
-  id: 3
+  id: 1
   password_salt: ""
   reset_password_token: 
   remember_token: 
   current_sign_in_ip: 
   remember_created_at: 
   current_sign_in_at: 
-  email: alec_ortiz@dachmills.name
+  email: kevin@treutel.name
