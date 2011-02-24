@@ -142,4 +142,6 @@ Devise.setup do |config|
 
   config.omniauth :facebook, ENV['FACEBOOK_APP_ID'], ENV['FACEBOOK_APP_SECRET']
   config.omniauth :twitter, ENV['TWITTER_CONSUMER_KEY'], ENV['TWITTER_CONSUMER_SECRET']
+  config.omniauth :you_tube, ENV['YOUTUBE_CONSUMER_KEY'], ENV['YOUTUBE_CONSUMER_SECRET']
+  config.omniauth :vimeo, ENV['VIMEO_CONSUMER_KEY'], ENV['VIMEO_CONSUMER_SECRET']
 end

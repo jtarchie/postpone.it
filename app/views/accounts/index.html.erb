@@ -6,4 +6,10 @@
   <li>
     <%= link_to "Twitter (#{current_user.authorizations.provider("twitter").count})", user_omniauth_authorize_path(:twitter) %>
   </li>
+  <li>
+    <%= link_to "Vimeo (#{current_user.authorizations.provider("vimeo").count})", user_omniauth_authorize_path(:vimeo) %>
+  </li>
+  <li>
+    <%= link_to "YouTube (#{current_user.authorizations.provider("you_tube").count})", user_omniauth_authorize_path(:you_tube) %>
+  </li>
 </ul>

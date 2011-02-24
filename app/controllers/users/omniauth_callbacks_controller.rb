@@ -7,6 +7,14 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     omniauth_action("Twitter")
   end
 
+  def vimeo
+    omniauth_action("Vimeo")
+  end
+
+  def you_tube
+    omniauth_action("YouTube")
+  end
+
   private
   def omniauth_action(provider)
     omniauth = request.env['omniauth.auth']

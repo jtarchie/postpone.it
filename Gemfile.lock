@@ -1,4 +1,18 @@
 GIT
+  remote: git://github.com/intridea/omniauth.git
+  revision: a772efb04270237410ac8313fcf180c46fde2053
+  tag: v0.2.0.beta4
+  specs:
+    oa-core (0.2.0.beta4)
+      rack (~> 1.1)
+    oa-oauth (0.2.0.beta4)
+      multi_json (~> 0.0.2)
+      nokogiri (~> 1.4.2)
+      oa-core (= 0.2.0.beta4)
+      oauth (~> 0.4.0)
+      oauth2 (~> 0.1.1)
+
+GIT
   remote: git://github.com/koppen/hassle.git
   revision: 97512c65f4c6fa34a4d4e284c416e8e6ebecbd44
   specs:
@@ -115,14 +129,6 @@ GEM
     multipart-post (1.1.0)
     mysql2 (0.2.6)
     nokogiri (1.4.4)
-    oa-core (0.1.6)
-      rack (~> 1.1)
-    oa-oauth (0.1.6)
-      multi_json (~> 0.0.2)
-      nokogiri (~> 1.4.2)
-      oa-core (= 0.1.6)
-      oauth (~> 0.4.0)
-      oauth2 (~> 0.1.0)
     oauth (0.4.4)
     oauth2 (0.1.1)
       faraday (~> 0.5.0)
@@ -194,6 +200,6 @@ DEPENDENCIES
   hassle!
   launchy
   mysql2 (= 0.2.6)
-  oa-oauth
+  oa-oauth!
   rails (= 3.0.4)
   rspec-rails (>= 2.5.0)

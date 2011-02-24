@@ -5,7 +5,7 @@ gem 'devise', :git => "git://github.com/plataformatec/devise.git"
 gem 'compass' , '>= 0.10.6'
 gem 'haml-rails'
 gem 'hassle', :git => 'git://github.com/koppen/hassle.git'
-gem "oa-oauth", :require => "omniauth/oauth"
+gem "oa-oauth", :require => "omniauth/oauth", :git => "git://github.com/intridea/omniauth.git", :tag => 'v0.2.0.beta4'
 
 
 # Bundle edge Rails instead:

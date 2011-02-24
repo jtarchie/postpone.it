@@ -60,17 +60,5 @@ Before do
   require File.join(File.dirname(__FILE__), '../../spec/support/factories.rb')
 end
 
-
-Before do
-  Devise::OmniAuth.test_mode!
-end
-
-After do
- Devise::OmniAuth.unshort_circuit_authorizers!
- Devise::OmniAuth.reset_stubs!(:facebook)
- Devise::OmniAuth.reset_stubs!(:twitter)
-end
-
-
 DEFAULT_USERNAME = "testing@man.net"
 
