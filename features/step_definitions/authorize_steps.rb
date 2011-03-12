@@ -8,13 +8,12 @@ And /^redirect back to the "([^"]*)" provider$/ do |provider|
 end
 
 And /^we stub out Facebook$/ do
-  FACEBOOK_API_BASE = 'https://graph.facebook.com/'
-  FakeWeb.register_uri(:post, FACEBOOK_API_BASE + 'oauth/access_token',
-                       :body => {
+  stub_request(:post, "https://graph.facebook.com/oauth/access_token").
+    to_return(:body => {
                        :access_token => "faketoken"
                        }.to_json)
-  FakeWeb.register_uri(:get, FACEBOOK_API_BASE + 'me?access_token=faketoken',
-                       :body => {
+  stub_request(:get, "https://graph.facebook.com/me?access_token=faketoken").
+  to_return(:body => {
                        :id => '12345',
                        :link => 'http://facebook.com/user_example',
                        :email => DEFAULT_USERNAME,
@@ -25,36 +24,28 @@ And /^we stub out Facebook$/ do
 end
 
 And /^we stub out Twitter$/ do
-  TWITTER_API_BASE = 'https://api.twitter.com/'
-
-  FakeWeb.register_uri(:post, TWITTER_API_BASE + 'oauth/request_token',
-                       :body => 'oauth_token=fake'
-  )
-  FakeWeb.register_uri(:post, TWITTER_API_BASE + 'oauth/access_token',
-                       :body => 'oauth_token=fake&oauth_token_secret=fake'
-  )
-  FakeWeb.register_uri(:get,
-                       TWITTER_API_BASE + '1/account/verify_credentials.json',
-                       :body => {
+  stub_request(:post, "https://api.twitter.com/oauth/request_token").
+  to_return(:status => 200, :body => "oauth_token=fake")
+  stub_request(:post, "https://api.twitter.com/oauth/access_token").
+  to_return(:status => 200, :body => "oauth_token=fake&oauth_token_secret=fake")
+  stub_request(:get, "https://api.twitter.com/1/account/verify_credentials.json").
+  to_return(:status => 200, :body => {
                          :screen_name => "johnsmith",
                          :name => "John Smith",
                          :location => "San Francisco",
                          :url => "http://example.com"
-                       }.to_json
-  )
+                       }.to_json)
 end
 
 And /^we stub out Vimeo$/ do
   VIMEO_API_BASE = 'http://vimeo.com/'
 
-  FakeWeb.register_uri(:post, VIMEO_API_BASE + 'oauth/request_token',
-                       :body => 'oauth_token=fake'
-  )
-  FakeWeb.register_uri(:post, VIMEO_API_BASE + 'oauth/access_token',
-                       :body => 'oauth_token=fake&oauth_token_secret=fake'
-  )
-  FakeWeb.register_uri(:get, VIMEO_API_BASE + 'api/rest/v2?method=vimeo.people.getInfo&format=json',
-                       :body => { :person => {
+  stub_request(:post, "http://vimeo.com/oauth/request_token").
+  to_return(:status => 200, :body => "oauth_token=fake")
+  stub_request(:post, "http://vimeo.com/oauth/access_token").
+  to_return(:status => 200, :body => "oauth_token=fake&oauth_token_secret=fake")
+  stub_request(:get, "http://vimeo.com/api/rest/v2?format=json&method=vimeo.people.getInfo").
+  to_return(:status => 200, :body => { :person => {
                        :username => "johnsmith",
                        :display_name => "John Smith",
                        :location => "San Francisco",
@@ -62,21 +53,18 @@ And /^we stub out Vimeo$/ do
                        :portraits => {
                        :portrait => [{:height => '300', "_content" => ""}]
                        }}
-                       }.to_json
-  )
+                       }.to_json)
 end
 
 And /^we stub out YouTube$/ do
   YOUTUBE_API_BASE = 'https://www.google.com/'
 
-  FakeWeb.register_uri(:post, YOUTUBE_API_BASE + 'accounts/OAuthGetRequestToken',
-                       :body => 'oauth_token=fake'
-  )
-  FakeWeb.register_uri(:post, YOUTUBE_API_BASE + 'accounts/OAuthGetAccessToken',
-                       :body => 'oauth_token=fake&oauth_token_secret=fake'
-  )
-  FakeWeb.register_uri(:get, 'http://gdata.youtube.com/feeds/api/users/default?alt=json',
-                       :body => {
+  stub_request(:post, "https://www.google.com/accounts/OAuthGetRequestToken").
+  to_return(:status => 200, :body => "oauth_token=fake")
+  stub_request(:post, "https://www.google.com/accounts/OAuthGetAccessToken").
+  to_return(:status => 200, :body => "oauth_token=fake&oauth_token_secret=fake")
+  stub_request(:get, "http://gdata.youtube.com/feeds/api/users/default?alt=json").
+  to_return(:status => 200, :body => {
                         :entry => {
                           'id' => {},
                           'author' => [{'name'=>{}}],
@@ -86,8 +74,7 @@ And /^we stub out YouTube$/ do
                           'yt$description' => '',
                           'yt$location' => ''
                         }
-                       }.to_json
-  )
+                       }.to_json)
 end
 
 And /^we authorize with "([^"]*)"$/ do |provider|

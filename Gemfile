@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.4'
+gem 'rails', '3.0.5'
 gem 'devise', :git => "git://github.com/plataformatec/devise.git"
 gem 'compass' , '>= 0.10.6'
 gem 'haml-rails'
@@ -21,5 +21,5 @@ group :development, :test do
   gem 'capybara'
   gem 'database_cleaner'
   gem "launchy"
-  gem "fakeweb"
+  gem "webmock"
 end
