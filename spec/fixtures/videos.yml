@@ -1,0 +1,17 @@
+--- 
+other_video: 
+  created_at: 2011-03-19 23:53:34 Z
+  title: Video
+  updated_at: 2011-03-19 23:53:34 Z
+  url: http://example.com/video.mov
+  id: 2
+  user_id: 10
+  description: A video with some content
+video: 
+  created_at: 2011-03-19 23:53:34 Z
+  title: Video
+  updated_at: 2011-03-19 23:53:34 Z
+  url: http://example.com/video.mov
+  id: 1
+  user_id: 9
+  description: A video with some content

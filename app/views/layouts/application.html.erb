@@ -13,6 +13,7 @@
       <%-if alert.present?-%><p class="alert"><%= alert %></p><%-end-%>
       <ul class="nav">
         <li><%=link_to "Accounts", accounts_path %></li>
+        <li><%=link_to "Videos", videos_path %></li>
       </ul>
       <%= yield %>
     </div>

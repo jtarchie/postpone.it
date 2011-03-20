@@ -25,5 +25,12 @@
   ul.nav {
     @include horizontal-list;
   }
+
+  form {
+    @include blueprint-form;
+    label {
+      display: block;
+    }
+  }
 }
 

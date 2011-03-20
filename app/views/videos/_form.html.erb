@@ -1,0 +1,6 @@
+<%= simple_form_for @video do |f| %>
+  <%= f.input :title, :as => :string %>
+  <%= f.input :url, :as => :string %>
+  <%= f.input :description, :as => :text %>
+  <%= f.button :submit %> <%= link_to "Cancel", videos_path %>
+<% end %>

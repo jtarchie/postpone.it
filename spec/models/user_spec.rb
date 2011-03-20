@@ -10,16 +10,7 @@ describe User do
   end
 
   describe "associations" do
-    before do
-      @user = users(:user)
-    end
-    context "authorizations" do
-      it "should delete on user destroy" do
-        @user.authorizations.create(:provider => "test", :uid => "test")
-        expect {
-          @user.destroy
-        }.should change(Authorization, :count).by(-1)
-      end
-    end
+    it {should have_many(:authorizations).dependent(:delete_all)}
+    it {should have_many(:videos).dependent(:destroy)}
   end
 end

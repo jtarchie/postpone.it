@@ -6,7 +6,7 @@ gem 'compass' , '>= 0.10.6'
 gem 'haml-rails'
 gem 'hassle', :git => 'git://github.com/koppen/hassle.git'
 gem "oa-oauth", :require => "omniauth/oauth", :git => "git://github.com/intridea/omniauth.git", :tag => 'v0.2.0.beta4'
-
+gem "simple_form"
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -22,4 +22,5 @@ group :development, :test do
   gem 'database_cleaner'
   gem "launchy"
   gem "webmock"
+  gem "shoulda-matchers"
 end

@@ -9,4 +9,5 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me
 
   has_many :authorizations, :dependent => :delete_all
+  has_many :videos, :dependent => :destroy
 end

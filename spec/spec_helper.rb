@@ -29,13 +29,5 @@ RSpec.configure do |config|
   config.include Devise::TestHelpers, :type => :controller
   config.render_views
 
-  Devise::OmniAuth.test_mode!
-
-  config.before do
-    Devise::OmniAuth.short_circuit_authorizers!
-  end
-
-  config.after do
-    Devise::OmniAuth.unshort_circuit_authorizers!
-  end
+  OmniAuth.config.test_mode = true
 end

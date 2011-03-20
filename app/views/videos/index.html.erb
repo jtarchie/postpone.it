@@ -1,0 +1,21 @@
+<h1>Videos</h1>
+<p>
+  <%=link_to "Add Video", new_video_path %>
+</p>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>URL</th>
+    <th>Description</th>
+    <th></th>
+  </tr>
+  <%- @videos.each do |video| -%>
+    <tr>
+      <td><%= video.title %></td>
+      <td><%= link_to video.url, video.url %></td>
+      <td><%= video.description %></td>
+      <td><%=link_to "Edit", edit_video_path(video)%> <%= button_to "Delete", video_path(video), :method => :delete %></td>
+    </tr>
+  <%- end -%>
+</table>
